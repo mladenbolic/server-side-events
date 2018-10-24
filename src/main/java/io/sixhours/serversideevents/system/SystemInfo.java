@@ -6,6 +6,7 @@ import lombok.Value;
 public class SystemInfo {
 
   MemoryUsage memoryUsage;
+  CpuUsage cpuUsage;
 
   @Value
   static class MemoryUsage {
@@ -13,5 +14,10 @@ public class SystemInfo {
     double heap;
     double maxHeap;
     double committed;
+  }
+
+  @Value
+  static class CpuUsage {
+    double cpuLoad;
   }
 }
