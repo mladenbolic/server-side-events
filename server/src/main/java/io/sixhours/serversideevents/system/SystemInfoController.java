@@ -16,7 +16,8 @@ public class SystemInfoController {
   @NonNull
   private SystemInfoService systemInfoService;
 
-  @GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+  // @GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+  @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
   public Flux<SystemInfo> getStatus(){
     return systemInfoService.getInfo();
   }
