@@ -17,9 +17,8 @@ public class DefaultSystemInfoService implements SystemInfoService {
   @Override
   public Flux<SystemInfo> getInfo() {
     Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
-    // interval.subscribe(aLong -> );
-
     Flux<SystemInfo> stockTransactionFlux = Flux.fromStream(Stream.generate(() -> new SystemInfo(getMemoryUsage(), getCpuUsage())));
+    
     return Flux.zip(interval, stockTransactionFlux).map(Tuple2::getT2);
   }
 
