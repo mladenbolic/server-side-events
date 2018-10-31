@@ -15,6 +15,7 @@ export class AppComponent {
 
   connect(): void {
     let eventSource = new EventSource('http://localhost:8080/system-info');
+    // let eventSource = new EventSource('http://localhost:8080/actuator/metrics/system.cpu.usage');
 
     eventSource.onmessage = (event: MessageEvent) => {
       let json = JSON.parse(event.data);
