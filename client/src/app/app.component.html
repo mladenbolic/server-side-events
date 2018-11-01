@@ -13,14 +13,7 @@
   </mat-menu>
 
   <mat-card>
-    <div style="display: block">
-      <canvas baseChart
-              [data]="doughnutChartData"
-              [labels]="doughnutChartLabels"
-              [chartType]="doughnutChartType"
-              (chartHover)="chartHovered($event)"
-              (chartClick)="chartClicked($event)"></canvas>
-    </div>
+    <cpu-load></cpu-load>
   </mat-card>
 
   <span class="done">

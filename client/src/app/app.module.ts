@@ -8,10 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsModule } from 'ng2-charts';
+import { CpuLoadComponent } from './cpu-load/cpu-load.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, CpuLoadComponent
   ],
   imports: [
     BrowserModule,
